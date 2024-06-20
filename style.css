@@ -161,12 +161,20 @@ body {
   color: var(--white-color);
 }
 
-/* This is for work experience page */
+
+
+
+/* WORK EXPERIENCE PAGE */
 .book-page.page-right {
   /* This is what allows you to have profile on left page and work exp on right page */
   position: absolute;
   right: 0;
   transform-style:preserve-3d;
+  transform-origin: left;
+}
+
+.book-page.page-right.turn{
+  transform:rotateY(-180deg);
 }
 
 .book-page .page-front,
@@ -194,13 +202,15 @@ body {
 .workexp-box{
   border-left: var(--border);
   
+  
 
 }
 .workexp-box .workexp-content{
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 1.3rem;
-    /* background: seagreen; */
+    background: rgba(2, 54, 94, 0.163);
+    border-radius: 5%;
 }
 .workexp-box .workexp-content h3{
     font-size:1rem;
@@ -226,4 +236,122 @@ body {
 .workexp-content .year i{
    margin-right: .5rem;
     
+}
+
+.page-number{
+  position: absolute;
+  bottom: 1.2rem;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nextprev-btn.next{
+  position:absolute;
+  width:2rem;
+  height:2rem;
+
+  left:52%;
+  bottom:-0.3rem;
+  cursor:pointer;
+  font-size:1rem;
+  justify-content: center;
+  align-items: center;
+  color:var(--second-text-color);
+  display: inline-flex;
+  transition:.5s;
+
+}
+
+.nextprev-btn.next:hover,
+.nextprev-btn.back:hover{
+  color:var(--main-color);
+
+}
+.nextprev-btn.back{
+  position:absolute;
+  width:2rem;
+  height:2rem;
+
+  left:42%;
+  bottom:-0.3rem;
+  cursor:pointer;
+  font-size:1rem;
+  justify-content: center;
+  align-items: center;
+  color:var(--second-text-color);
+  display: inline-flex;
+  transition:.5s;
+}
+
+
+
+
+/* EDUCATION PAGE*/
+.ed-box{
+  border-left: var(--border);
+  
+  
+
+}
+
+.ed-box .ed-content{
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.3rem;
+    background: rgba(6, 9, 73, 0.163);
+    border-radius: 5%;
+}
+
+.ed-box .ed-content::before{
+   content: ''; /*this adds a bullet point next to each work exp content*/
+    position: absolute;
+    top: 0;
+    left: -0.65rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+.ed-content .columns{
+  display:flex;
+  justify-content: space-between;
+}
+
+.column {
+    width: 48%;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+
+
+
+/* PROJECTS */
+
+.projects-box{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.projects-box .projects-content{
+  flex:1 1 10rem;
+  border: var(--border);
+  border-radius: 1rem;
+  text-align: center;
+  padding: .5rem .2rem -1rem;
+  transform:scale(0.9);
+    overflow: hidden;
+  
+  
+}
+
+.projects-content H3{
+
+ 
+  background-color:var(--main-color)
 }
