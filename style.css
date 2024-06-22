@@ -19,7 +19,7 @@
   --cover-color: linear-gradient(45deg, #113e5a, #006e9a);
   --pages-color: linear-gradient(90deg, #fff, #ddd);
   --border: 0.125rem solid #00abf0;
-  --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.393);
   --hover-color: rgb(212, 212, 212);
 }
 
@@ -31,6 +31,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
 
 .wrapper {
   position: relative;
@@ -161,197 +162,184 @@ body {
   color: var(--white-color);
 }
 
-
-
-
 /* WORK EXPERIENCE PAGE */
 .book-page.page-right {
   /* This is what allows you to have profile on left page and work exp on right page */
   position: absolute;
   right: 0;
-  transform-style:preserve-3d;
+  transform-style: preserve-3d;
   transform-origin: left;
 }
 
-.book-page.page-right.turn{
-  transform:rotateY(-180deg);
+.book-page.page-right.turn {
+  transform: rotateY(-180deg);
 }
 
 .book-page .page-front,
-.book-page .page-back{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: var(--pages-color);
-    padding: 1.5rem 2rem;
+.book-page .page-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--pages-color);
+  padding: 1.5rem 2rem;
 }
 
-.book-page .page-front{
-    transform: rotateY(0deg) translateZ(1px);
+.book-page .page-front {
+  transform: rotateY(0deg) translateZ(1px);
 }
-.book-page .page-back{
-    transform: rotateY(180deg) translateZ(1px);
+.book-page .page-back {
+  transform: rotateY(180deg) translateZ(1px);
 }
 
-.title{
-    text-align: center;
-    margin-bottom: 1rem;
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.workexp-box{
+.workexp-box {
   border-left: var(--border);
-  
-  
-
 }
-.workexp-box .workexp-content{
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1.3rem;
-    background: rgba(2, 54, 94, 0.163);
-    border-radius: 5%;
+.workexp-box .workexp-content {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.3rem;
+  background: rgba(2, 54, 94, 0.163);
+  border-radius: 5%;
 }
-.workexp-box .workexp-content h3{
-    font-size:1rem;
+.workexp-box .workexp-content h3 {
+  font-size: 1rem;
 }
-.workexp-box .workexp-content li{
-    font-size: .8rem;
+.workexp-box .workexp-content li {
+  font-size: 0.8rem;
 }
 
-.workexp-box .workexp-content::before{
-    content: ''; /*this adds a bullet point next to each work exp content*/
-    position: absolute;
-    top: 0;
-    left: -0.65rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: var(--main-color);
-    border-radius: 50%;
+.workexp-box .workexp-content::before {
+  content: ""; /*this adds a bullet point next to each work exp content*/
+  position: absolute;
+  top: 0;
+  left: -0.65rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--main-color);
+  border-radius: 50%;
 }
-.workexp-content .year{
-    color: var(--main-color);
-    /* float: right; */
+.workexp-content .year {
+  color: var(--main-color);
+  /* float: right; */
 }
-.workexp-content .year i{
-   margin-right: .5rem;
-    
+.workexp-content .year i {
+  margin-right: 0.5rem;
 }
 
-.page-number{
+.page-number {
   position: absolute;
   bottom: 1.2rem;
-  bottom:0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.nextprev-btn.next{
-  position:absolute;
-  width:2rem;
-  height:2rem;
+.nextprev-btn.next {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
 
-  left:52%;
-  bottom:-0.3rem;
-  cursor:pointer;
-  font-size:1rem;
+  left: 52%;
+  bottom: -0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
-  color:var(--second-text-color);
+  color: var(--second-text-color);
   display: inline-flex;
-  transition:.5s;
-
+  transition: 0.5s;
 }
 
 .nextprev-btn.next:hover,
-.nextprev-btn.back:hover{
-  color:var(--main-color);
-
+.nextprev-btn.back:hover {
+  color: var(--main-color);
 }
-.nextprev-btn.back{
-  position:absolute;
-  width:2rem;
-  height:2rem;
+.nextprev-btn.back {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
 
-  left:42%;
-  bottom:-0.3rem;
-  cursor:pointer;
-  font-size:1rem;
+  left: 42%;
+  bottom: -0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
-  color:var(--second-text-color);
+  color: var(--second-text-color);
   display: inline-flex;
-  transition:.5s;
+  transition: 0.5s;
 }
-
-
-
 
 /* EDUCATION PAGE*/
-.ed-box{
+.ed-box {
   border-left: var(--border);
-  
-  
-
 }
 
-.ed-box .ed-content{
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1.3rem;
-    background: rgba(6, 9, 73, 0.163);
-    border-radius: 5%;
+.ed-box .ed-content {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.3rem;
+  background: rgba(6, 9, 73, 0.163);
+  border-radius: 5%;
 }
 
-.ed-box .ed-content::before{
-   content: ''; /*this adds a bullet point next to each work exp content*/
-    position: absolute;
-    top: 0;
-    left: -0.65rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: var(--main-color);
-    border-radius: 50%;
+.ed-box .ed-content::before {
+  content: ""; /*this adds a bullet point next to each work exp content*/
+  position: absolute;
+  top: 0;
+  left: -0.65rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--main-color);
+  border-radius: 50%;
 }
-.ed-content .columns{
-  display:flex;
+.ed-content .columns {
+  display: flex;
   justify-content: space-between;
 }
 
 .column {
-    width: 48%;
-    list-style-type: disc;
-    padding-left: 20px;
+  width: 48%;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 .column li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
-
-
 
 /* PROJECTS */
 
-.projects-box{
-  display:flex;
+.projects-box {
+  display: flex;
   flex-wrap: wrap;
 }
 
-.projects-box .projects-content{
-  flex:1 1 10rem;
+.projects-box .projects-content {
+  flex: 1 1 10rem;
   border: var(--border);
   border-radius: 1rem;
   text-align: center;
-  padding: .5rem .2rem -1rem;
-  transform:scale(0.9);
-    overflow: hidden;
-  
-  
+  padding: 0.5rem 0.2rem -1rem;
+  transform: scale(0.9);
+  overflow: hidden;
+}
+.projects-box .projects-content:hover{
+  box-shadow: var(--box-shadow);
+
 }
 
-.projects-content H3{
-
- 
-  background-color:var(--main-color)
+.projects-content h3 {
+  background-color: var(--main-color);
 }
+
+.projects-content p {
+  margin-bottom: 0.2rem;
+}
+
