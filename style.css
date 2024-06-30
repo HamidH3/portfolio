@@ -240,7 +240,7 @@ body {
   transform: translateX(-50%);
 }
 
-.nextprev-btn.next {
+.nextprev-btn {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -256,7 +256,7 @@ body {
   transition: 0.5s;
 }
 
-.nextprev-btn.next:hover,
+.nextprev-btn:hover,
 .nextprev-btn.back:hover {
   color: var(--main-color);
 }
@@ -342,4 +342,5 @@ body {
 .projects-content p {
   margin-bottom: 0.2rem;
 }
+
 
